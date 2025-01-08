@@ -22,7 +22,6 @@ class _MyAppState extends State<MyApp> {
   //it should be replaced with the real activation code from the carrier
   final String _placeholderActivationCode =
       "LPA:1\$consumer.e-sim.global\$TN20240704143140B8803D46";
-  //1$rsp.truphone.com$QRF-BETTERROAMING-PMRDGIR2EARDEIT5
 
   @override
   void initState() {
