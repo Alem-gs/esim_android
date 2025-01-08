@@ -18,9 +18,8 @@ class _MyAppState extends State<MyApp> {
   bool _isSupportESim = false;
   final _flutterEsimPlugin = FlutterEsim();
 
-  //sample placeholder activation code
-  //it should be replaced with the real activation code from the carrier
-  final String _placeholderActivationCode =
+  //LPA or activation code
+  final String _activationCode =
       "LPA:1\$consumer.e-sim.global\$TN20240704143140B8803D46";
 
   @override
@@ -64,8 +63,7 @@ class _MyAppState extends State<MyApp> {
     // }
     try {
       print("Attempting to install eSIM...");
-      var result = await _flutterEsimPlugin
-          .installEsimProfile(_placeholderActivationCode);
+      var result = await _flutterEsimPlugin.installEsimProfile(_activationCode);
       print("Result of eSIM installation: $result");
       if (result == null || result == false) {
         print("eSIM installation failed (no exception thrown).");
